@@ -4,17 +4,25 @@ import './Upload.css';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { appContext } from '../App';
+import { v4 as uuidv4 } from 'uuid';
 
 
 export default function Upload() {
 
-    const {setModalDisplay} = useContext(appContext);
+    const {setModalDisplay, addPhotos} = useContext(appContext);
 
     const [ photoUrl, setPhotoUrl ] = useState('');
     const [ photoName, setPhotoName ] = useState('');
 
     function handleSubmit() {
-
+        e.preventDefault();
+        addPhotos({
+            id: uuidv4(),
+            imgUrl: photoUrl,
+            imgName: photoName,
+            uploadTime: Date.now(),
+        });
+        setModalDisplay(false);
     }
 
 

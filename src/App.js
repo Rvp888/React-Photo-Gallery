@@ -37,10 +37,13 @@ function App() {
         },
   ]);
 
+  function addPhotos(photo) {
+    setImages(images => [...images, photo]);
+  }
 
   return (
     <div className="App">
-      <appContext.Provider value={{images, setModalDisplay}} >
+      <appContext.Provider value={{images, setModalDisplay, addPhotos}} >
         <Header />
         <Main />
         <Footer />
