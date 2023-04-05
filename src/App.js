@@ -7,7 +7,7 @@ import Main from './Components/Main';
 import { v4 as uuidv4 } from 'uuid';
 
 
-const appContext = createContext();
+export const appContext = createContext();
 
 function App() {
 
@@ -37,9 +37,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <Main />
-      <Footer />
+      <appContext.Provider value={{images}} >
+        <Header />
+        <Main />
+        <Footer />
+      </appContext.Provider>     
     </div>
   );
 }
