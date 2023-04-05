@@ -26,8 +26,10 @@ function App() {
     setImages(images => [...images, photo]);
   }
 
-  function setSearchImages() {
-
+  function setSearchImages(text) {
+    setSearchText(text);
+    let filteredImages = images.filter(image => image.imgName.toLowerCase().includes(text.toLowerCase()));
+    setSearchedImages(filteredImages);
   }
 
 
