@@ -14,7 +14,7 @@ export default function Upload() {
     const [ photoUrl, setPhotoUrl ] = useState('');
     const [ photoName, setPhotoName ] = useState('');
 
-    function handleSubmit() {
+    function handleSubmit(e) {
         e.preventDefault();
         addPhotos({
             id: uuidv4(),
