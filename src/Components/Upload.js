@@ -16,15 +16,15 @@ export default function Upload() {
 
     return (
         <div className='upload-box'>
-            <h2>Uplod Photo</h2>
+            <h2 className='upload-title' >Uplod Photo</h2>
             <form className='upload-form' onSubmit={handleSubmit}>
-                <label>Photo URL</label>
+                <label className='upload-label'>Photo URL</label>
                 <br/>
-                <input type='text' onChange={(e) => setPhotoUrl(e.target.value)} />
+                <input type='text' className='upload-input' onChange={(e) => setPhotoUrl(e.target.value)} />
                 <br/>
-                <label>Photo Name</label>
+                <label className='upload-label'>Photo Name</label>
                 <br/>
-                <input type='text' onChange={(e) => setPhotoName(e.target.value)} />
+                <input type='text' className='upload-input' onChange={(e) => setPhotoName(e.target.value)} />
                 <br/>
                 <button className='upload-btn'>Upload</button>
                 <button className='cancel-btn'>Cancel</button>
