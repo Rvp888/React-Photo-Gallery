@@ -15,6 +15,7 @@ export default function Main() {
                 {images.map((image) => (
                     <div key={image.id} className='img-div' >
                         <img src={image.imgUrl} />
+                        <p className='img-name'>{image.imgName}</p>
                     </div>
                 ))}
             </div>

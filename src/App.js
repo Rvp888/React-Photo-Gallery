@@ -15,6 +15,8 @@ function App() {
 
   const [modalDisplay, setModalDisplay] = useState(false);
   const [images, setImages] = useState(JSON.parse(localStorage.getItem("images")) || []);
+  const [searchedImages, setSearchedImages] = useState([]);
+  const [searchText, setSearchText] = useState('');
 
   useEffect(() => {
     localStorage.setItem("images", JSON.stringify(images));
@@ -23,6 +25,11 @@ function App() {
   function addPhotos(photo) {
     setImages(images => [...images, photo]);
   }
+
+  function setSearchImages() {
+
+  }
+
 
   return (
     <div className="App">
