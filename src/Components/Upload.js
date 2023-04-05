@@ -2,9 +2,13 @@
 import React from 'react';
 import './Upload.css';
 import { useState } from 'react';
+import { useContext } from 'react';
+import { appContext } from '../App';
 
 
 export default function Upload() {
+
+    const {setModalDisplay} = useContext(appContext);
 
     const [ photoUrl, setPhotoUrl ] = useState('');
     const [ photoName, setPhotoName ] = useState('');
@@ -27,7 +31,7 @@ export default function Upload() {
                 <input type='text' className='upload-input' onChange={(e) => setPhotoName(e.target.value)} />
                 <br/>
                 <button className='upload-btn'>Upload</button>
-                <button className='cancel-btn'>Cancel</button>
+                <button className='cancel-btn' onClick={() => setModalDisplay(false)}>Cancel</button>
             </form>
         </div>
     )

@@ -13,6 +13,7 @@ export const appContext = createContext();
 
 function App() {
 
+  const [modalDisplay, setModalDisplay] = useState(false);
   const [images, setImages] = useState([
         {
           id: uuidv4(),
@@ -39,11 +40,11 @@ function App() {
 
   return (
     <div className="App">
-      <appContext.Provider value={{images}} >
+      <appContext.Provider value={{images, setModalDisplay}} >
         <Header />
         <Main />
         <Footer />
-        <Upload />
+        {modalDisplay && <Upload />}
       </appContext.Provider>     
     </div>
   );
