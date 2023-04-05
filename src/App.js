@@ -6,6 +6,7 @@ import Header from './Components/Header';
 import Main from './Components/Main';
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
+import Upload from './Components/Upload';
 
 
 export const appContext = createContext();
@@ -42,6 +43,7 @@ function App() {
         <Header />
         <Main />
         <Footer />
+        <Upload />
       </appContext.Provider>     
     </div>
   );
