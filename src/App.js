@@ -26,7 +26,7 @@ function App() {
     setImages(images => [...images, photo]);
   }
 
-  function setSearchImages(text) {
+  function filterSearchedImages(text) {
     setSearchText(text);
     let filteredImages = images.filter(image => image.imgName.toLowerCase().includes(text.toLowerCase()));
     setSearchedImages(filteredImages);
@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="App">
-      <appContext.Provider value={{images, setModalDisplay, addPhotos}} >
+      <appContext.Provider value={{images:searchText ? searchedImages : images, setModalDisplay, addPhotos, filterSearchedImages}} >
         <Header />
         <Main />
         <Footer />
