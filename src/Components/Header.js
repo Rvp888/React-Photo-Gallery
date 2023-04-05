@@ -5,8 +5,8 @@ export default function Header() {
     return (
         <div className='header'>
             <h2 className='app_title' >Photo-Gallery</h2>
-            <input type='search' placeholder='Search...' />
-            <button>+</button>
+            <input type='search' className='search-input' placeholder='Search...' />
+            <button className='upload-img-btn' >+</button>
         </div>
     )
 }
