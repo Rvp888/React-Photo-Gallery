@@ -20,7 +20,14 @@
     border-radius: 5px;
     border: 1px solid gray;
     background-color: rgb(180, 201, 242);
+    box-shadow: 0 0 2px 0 white;
     cursor: pointer;
+}
+
+.change-view-btn:hover {
+    background-color: rgb(135, 172, 245);
+    box-shadow: 0 0 3px 0;
+    transition: background-color, 0.5s;
 }
 
 .main .main_gallery {
