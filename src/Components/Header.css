@@ -15,7 +15,8 @@
 }
 
 .header .app_title {
-
+    font-size: 30px;
+    color:rgb(97, 79, 210)
 }
 
 .header .search-input {
