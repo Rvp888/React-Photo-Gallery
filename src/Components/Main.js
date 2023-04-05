@@ -11,7 +11,7 @@ export default function Main() {
     <div className='main'>
       <div className='main_gallery' >
         {images.map((image) => (
-            <div key={image.id}>
+            <div key={image.id} className='img-div' >
                 <img src={image.imgUrl} />
             </div>
         ))}
