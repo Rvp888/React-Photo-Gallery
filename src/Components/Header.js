@@ -7,10 +7,16 @@ export default function Header() {
 
     const {setModalDisplay, filterSearchedImages} = useContext(appContext);
 
+    function handleSearch(text) {
+        setTimeout(() => {
+            filterSearchedImages(text);
+        },2000);
+    }
+
     return (
         <div className='header'>
             <h2 className='app_title' >Photo-Gallery</h2>
-            <input type='search' className='search-input' onChange={(e) => filterSearchedImages(e.target.value)} placeholder='Search...' />
+            <input type='search' className='search-input' onChange={(e) => handleSearch(e.target.value)} placeholder='Search...' />
             <button className='upload-img-btn' onClick={() => setModalDisplay(true)} title='Upload Image' >+</button>
         </div>
     )
